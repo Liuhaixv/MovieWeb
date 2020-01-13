@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+<div id="register">
+    <form action="" id="registerForm">
+        <table align="center">
+            <tr>
+                <td>姓名</td>
+                <td><input type="text" name="t_name"></td>
+            </tr>
+            <tr>
+                <td>账号</td>
+                <td><input type="text" name="t_account"></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="text" name="t_password"></td>
+            </tr>
+            <tr>
+                <td>年龄</td>
+                <td><input type="number" name="t_age"></td>
+            </tr>
+            <tr>
+                <td>身份证号</td>
+                <td><input type="text" name="t_sfz"></td>
+            </tr>
+        </table>
+    </form>
+    <table align="center">
+        <tr>
+
+            <td>
+                <button onclick="register()">注册</button>
+            </td>
+            <td>
+                <button onclick="showUsers()">查看已注册用户</button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+<script>
+    function register() {
+        document.getElementById("registerForm").action = "register";
+        document.getElementById("registerForm").submit();
+    }
+
+    function showUsers() {
+        document.location = "showUsers";
+    }
+</script>
+</html>
